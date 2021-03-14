@@ -430,7 +430,7 @@ print('Periodic boundaries')
 
 # Read parameters in JSON format
 try:
-    nml = json.load(sys.stdin)
+    nml = {}
 except json.JSONDecodeError:
     print('Exiting on Invalid JSON format')
     sys.exit()
