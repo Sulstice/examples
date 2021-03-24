@@ -436,7 +436,7 @@ except json.JSONDecodeError:
     sys.exit()
 
 # Set default values, check keys and typecheck values
-defaults = {"n":0, "nc":4, "temperature":300.0, "inertia":1.0, "density":0.75, "length":0.0, "constraints":True,
+defaults = {"n":0, "nc":4, "temperature":1.0, "inertia":1.0, "density":0.75, "length":0.0, "constraints":True,
                 "bond":1.122462, "velocities":True, "molecules":"atom", "lattice":True, "soft":False}
 for key, val in nml.items():
     if key in defaults:
