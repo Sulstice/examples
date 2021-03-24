@@ -131,7 +131,7 @@ except json.JSONDecodeError:
     sys.exit()
 
 # Set default values, check keys and typecheck values
-defaults = {"nblock":10, "nstep":1000, "temperature":1.0, "r_cut":2.5, "dr_max":0.15}
+defaults = {"nblock":10, "nstep":1000, "temperature":300.0, "r_cut":2.5, "dr_max":0.15}
 for key, val in nml.items():
     if key in defaults:
         assert type(val) == type(defaults[key]), key+" has the wrong type"
