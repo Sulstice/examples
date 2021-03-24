@@ -268,7 +268,7 @@ def chain_velocities ( nn, temperature, constraints, r ):
     ang_mom = np.sum ( np.cross(r,v), axis=0 )
     assert not np.any(v_cm>tol), "{}{:15.8f}{:15.8f}{:15.8f}".format('Linear momentum error', *v_cm)
     assert not np.any(ang_mom>tol), "{}{:15.8f}{:15.8f}{:15.8f}".format('Angular momentum error', *ang_mom)
-
+    print ("Velocities: %s" % v)
     return v
 
 def rattle_b ( r, v ):
