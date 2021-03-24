@@ -181,7 +181,7 @@ for blk in range(1,nblock+1): # Loop over blocks
         r = r - np.rint ( r ) # Periodic boundaries
 
         total, f = force ( box, r_cut, r ) # Force evaluation
-        assert not total.ovr, 'Overlap in configuration'
+#         assert not total.ovr, 'Overlap in configuration'
 
         v = v + 0.5 * dt * f # Kick half-step
 
@@ -194,7 +194,7 @@ for blk in range(1,nblock+1): # Loop over blocks
 run_end ( calc_variables() )
 
 total, f = force ( box, r_cut, r ) # Force evaluation
-assert not total.ovr, 'Overlap in final configuration'
+# assert not total.ovr, 'Overlap in final configuration'
 
 write_cnf_atoms ( cnf_prefix+out_tag, n, box, r*box, v ) # Save configuration
 conclusion()
